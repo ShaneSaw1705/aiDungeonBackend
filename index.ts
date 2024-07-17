@@ -6,13 +6,13 @@ const port = 3000
 
 app.use('/test', testRoute)
 
-app.get('/', (req: Request, res: Response): void => {
-  res.json('test').status(200)
+app.get('/', (req: Request, res: Response): Response => {
+  return res.json('test').status(200)
 })
 
-app.get('/:id', (req: Req, res: Res): void => {
+app.get('/:id', (req: Request, res: Response): Response => {
   const { id } = req.params
-  res.json(id).status(200)
+  return res.json(id).status(200)
 })
 
 app.listen(port, (): void => {
