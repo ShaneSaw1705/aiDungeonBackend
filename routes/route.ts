@@ -1,9 +1,9 @@
-import express from 'express'
+import express, { Request, Response } from 'express'
 
-const route = express.Router()
+const router = express.Router()
 
-route.get('/', (req, res) => {
-  res.json('test-route').status(200)
+router.get('/', (req: Request, res: Response): void => {
+  res.json('test-router').status(200)
 })
 
-export default route
+export default router
