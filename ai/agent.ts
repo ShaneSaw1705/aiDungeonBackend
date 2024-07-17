@@ -30,4 +30,3 @@ export async function generateStory(): Promise<void> {
   console.log(response);
 }
 
-main('wake up')
