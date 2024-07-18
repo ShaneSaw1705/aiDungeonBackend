@@ -1,10 +1,12 @@
 import express, { Request, Response } from "express";
 import testRoute from './routes/route'
+import aiRoute from './routes/ai/aiRouter'
 
 const app = express()
 const port = 3000
 
 app.use('/test', testRoute)
+app.use('/ai', aiRoute)
 
 app.get('/', (req: Request, res: Response): Response => {
   return res.json('test').status(200)
