@@ -8,11 +8,11 @@ const port = 3000;
 app.use("/test", testRoute);
 app.use("/ai", aiRoute);
 
-app.get("/", (req: Request, res: Response): Response => {
+app.get("/", (req, res): Response => {
   return res.json("test").status(200);
 });
 
-app.get("/:id", (req: Request, res: Response): Response => {
+app.get("/:id", (req, res): Response => {
   const { id } = req.params;
   return res.json(id).status(200);
 });
